@@ -1,4 +1,4 @@
-# GitHub theme colour palette
+# GitHub Theme Colour Palette
 
 ### Primer's Guide:
 - [Primitives](https://primer.style/product/primitives/)

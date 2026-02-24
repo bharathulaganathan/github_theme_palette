@@ -29,13 +29,13 @@ local palette = {
     }
 }
 
-palette = {
+local ansi = {
     dark = {
         fg = palette.dark.text,
         bg = palette.dark.neutral[2],
         cursor_fg = palette.dark.cursor[1],
         cursor_bg = palette.dark.cursor[2],
-        ansi = {
+        standard = {
             black = palette.dark.neutral[7], red = palette.dark.red[4], green = palette.dark.green[4], yellow = palette.dark.yellow[4], blue = palette.dark.blue[4], magenta = palette.dark.purple[4], cyan = palette.dark.cyan[2], white = palette.dark.neutral[13], pink = palette.dark.pink[4], coral = palette.dark.coral[4],
         },
         bright = {
@@ -47,7 +47,7 @@ palette = {
         bg = palette.light.neutral[1],
         cursor_fg = palette.light.cursor[1],
         cursor_bg = palette.light.cursor[2],
-        ansi = {
+        standard = {
             black = palette.light.neutral[14], red = palette.light.red[6], green = palette.light.green[7], yellow = palette.light.yellow[9], blue = palette.light.blue[6], magenta = palette.light.purple[6], cyan = palette.light.cyan[2], white = palette.light.neutral[10], pink = palette.light.pink[6], coral = palette.light.coral[6],
 
         },
@@ -57,4 +57,7 @@ palette = {
     }
 }
 
-return palette
+return {
+    palette = palette,
+    ansi = ansi
+}

@@ -1,22 +1,4 @@
--- type             dark            light
-
--- foreground       text            text
--- background       neutral[2]      neutral[1]
--- cursor-bg        cursor[2]       cursor[2]
--- cursor-fg        cursor[1]       cursor[2]
-
---                  dark ansi       light ansi      dark bright    light bright
--- black            neutral[7]      neutral[14]     neutral[9]      neutral[12]
--- red              red[4]          red[6]          red[3]          red[7]
--- green            green[4]        green[7]        green[3]        green[6]
--- yellow           yellow[4]       yellow[9]       yellow[3]       yellow[8]
--- blue             blue[4]         blue[6]         blue[3]         blue[5]
--- magenta          purple[4]       purple[6]       purple[3]       purple[5]
--- cyan             pink[4]         pink[6]         pink[3]         pink[5]
--- white            neutral[13]     neutral[10]     neutral[14]     neutral[9]
-
-
-return {
+local palette = {
     dark = {
         text    = '#e6edf3',
         cursor  = { '#6fc1ff', '#2f81f7' },
@@ -46,3 +28,33 @@ return {
         cyan    = { '#3192aa', '#1b7c83' }
     }
 }
+
+palette = {
+    dark = {
+        fg = palette.dark.text,
+        bg = palette.dark.neutral[2],
+        cursor_fg = palette.dark.cursor[1],
+        cursor_bg = palette.dark.cursor[2],
+        ansi = {
+            black = palette.dark.neutral[7], red = palette.dark.red[4], green = palette.dark.green[4], yellow = palette.dark.yellow[4], blue = palette.dark.blue[4], magenta = palette.dark.purple[4], cyan = palette.dark.cyan[2], white = palette.dark.neutral[13], pink = palette.dark.pink[4], coral = palette.dark.coral[4],
+        },
+        bright = {
+            black = palette.dark.neutral[9], red = palette.dark.red[3], green = palette.dark.green[3], yellow = palette.dark.yellow[3], blue = palette.dark.blue[3], magenta = palette.dark.purple[3], cyan = palette.dark.cyan[1], white = palette.dark.neutral[14], pink = palette.dark.pink[3], coral = palette.dark.coral[3],
+        }
+    },
+    light = {
+        fg = palette.light.text,
+        bg = palette.light.neutral[1],
+        cursor_fg = palette.light.cursor[1],
+        cursor_bg = palette.light.cursor[2],
+        ansi = {
+            black = palette.light.neutral[14], red = palette.light.red[6], green = palette.light.green[7], yellow = palette.light.yellow[9], blue = palette.light.blue[6], magenta = palette.light.purple[6], cyan = palette.light.cyan[2], white = palette.light.neutral[10], pink = palette.light.pink[6], coral = palette.light.coral[6],
+
+        },
+        bright = {
+            black = palette.light.neutral[12], red = palette.light.red[7], green = palette.light.green[6], yellow = palette.light.yellow[8], blue = palette.light.blue[5], magenta = palette.light.purple[5], cyan = palette.light.cyan[1], white = palette.light.neutral[9], pink = palette.light.pink[5], coral = palette.light.coral[5],
+        }
+    }
+}
+
+return palette
